@@ -99,6 +99,7 @@ function SetupForPool(logger, poolOptions, setupFinished){
                     logger.error(logSystem, logComponent, 'Error with payment processing daemon ' + JSON.stringify(result.error));
                     callback(true);
                 }
+		// john
                 // else if (!result.response || !result.response.ismine) {
                 else if (!result.response) {
                     logger.fatal(logSystem, logComponent,
