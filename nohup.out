@@ -1,0 +1,24 @@
+1061:C 14 May 17:04:09.566 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1061:C 14 May 17:04:09.566 # Redis version=4.0.9, bits=64, commit=00000000, modified=0, pid=1061, just started
+1061:C 14 May 17:04:09.566 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1061:M 14 May 17:04:09.568 * Running mode=standalone, port=6379.
+1061:M 14 May 17:04:09.568 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1061:M 14 May 17:04:09.568 # Server initialized
+1061:M 14 May 17:04:09.568 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1061:M 14 May 17:04:09.568 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1061:M 14 May 17:04:09.568 * Ready to accept connections
+1061:M 14 May 17:23:48.968 * 100 changes in 300 seconds. Saving...
+1061:M 14 May 17:23:48.969 * Background saving started by pid 29893
+29893:C 14 May 17:23:48.972 * DB saved on disk
+29893:C 14 May 17:23:48.973 * RDB: 0 MB of memory used by copy-on-write
+1061:M 14 May 17:23:49.069 * Background saving terminated with success
+1061:M 14 May 17:28:50.019 * 100 changes in 300 seconds. Saving...
+1061:M 14 May 17:28:50.019 * Background saving started by pid 4478
+4478:C 14 May 17:28:50.024 * DB saved on disk
+4478:C 14 May 17:28:50.024 * RDB: 0 MB of memory used by copy-on-write
+1061:M 14 May 17:28:50.120 * Background saving terminated with success
+1061:M 14 May 17:33:51.065 * 100 changes in 300 seconds. Saving...
+1061:M 14 May 17:33:51.065 * Background saving started by pid 9603
+9603:C 14 May 17:33:51.069 * DB saved on disk
+9603:C 14 May 17:33:51.070 * RDB: 0 MB of memory used by copy-on-write
+1061:M 14 May 17:33:51.165 * Background saving terminated with success
