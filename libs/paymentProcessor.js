@@ -214,7 +214,6 @@ function SetupForPool(logger, poolOptions, setupFinished){
                             serialized: r
                         };
                     });
-
                     callback(null, workers, rounds);
                 });
             },
@@ -226,13 +225,13 @@ function SetupForPool(logger, poolOptions, setupFinished){
                 var batchRPCcommand = rounds.map(function(r){
                     return ['gettransaction', [r.txHash]];
                 });
-
+		
                 batchRPCcommand.push(['getaccount', [poolOptions.address]]);
 
                 startRPCTimer();
                 daemon.batchCmd(batchRPCcommand, function(error, txDetails){
                     endRPCTimer();
-
+		    
                     if (error || !txDetails){
                         logger.error(logSystem, logComponent, 'Check finished - daemon rpc error with batch gettransactions '
                             + JSON.stringify(error));
@@ -327,7 +326,6 @@ function SetupForPool(logger, poolOptions, setupFinished){
                amount owned to each miner for each round. */
             function(workers, rounds, addressAccount, callback){
 
-
                 var shareLookups = rounds.map(function(r){
                     return ['hgetall', coin + ':shares:round' + r.height]
                 });
@@ -388,6 +386,7 @@ function SetupForPool(logger, poolOptions, setupFinished){
              if not sending the balance, the differnce should be +(the amount they earned this round)
              */
             function(workers, rounds, addressAccount, callback) {
+
                 var trySend = function (withholdPercent) {
 		    var test = Object.keys(workers);
                     var addressAmounts = {};
@@ -426,7 +425,7 @@ logger.info(logSystem, logComponent, 'addressAccount:');
 logger.info(logSystem, logComponent, addressAccount);
 logger.info(logSystem, logComponent, 'addressAmounts:');
 logger.info(logSystem, logComponent, addressAmounts);
-
+		    
                     if (Object.keys(addressAmounts).length === 0){
                         callback(null, workers, rounds);
                         return;
